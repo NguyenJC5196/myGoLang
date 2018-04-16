@@ -1,6 +1,9 @@
 package main
 import ("fmt"
 "math/rand")
+import "math"
+
+const s string = "constant"
 
 func main(){
 	fmt.Println("Welcome to Go")
@@ -8,11 +11,17 @@ func main(){
 	w1,w2:="Hey","there"
 	var a int=86
 	var b float64=float64(a)
-	x:=a
+	x := a
+	const n = 500000000
+	const d = 3e20 / n
 
 	// fmt.Println(add(num1,num2))
 	fmt.Println(multiple(w1,w2))
 	fmt.Println( a, b, x)
+	fmt.Println(s)
+	fmt.Println(d)
+	fmt.Println(int64(d))
+	fmt.Println(math.Sin(n))
 }
 func foo(){
 	fmt.Println("The random number is, ",rand.Intn(100))
