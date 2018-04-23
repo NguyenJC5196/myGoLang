@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main(){
+	mapFunction()
+}
+func different(){
 	if 7 % 2 == 0{
 		fmt.Println("number is even")
 	} else{
@@ -40,4 +43,22 @@ func loop(){
 		}
 		fmt.Println(n)
 	}
+}
+func mapFunction(){
+	grandes := make(map[string]float32)
+
+	grandes["Timmy"] = 42.7
+	grandes["Jess"] = 92.1
+	grandes["Sam"] = 67.3
+
+	fmt.Println(grandes)
+	TimsGrade := grandes["Timmy"]
+	fmt.Println(TimsGrade)
+
+	delete(grandes, "Timmy")
+	fmt.Println(grandes)
+
+	for k, v := range grandes {
+		fmt.Println(k,":", v)
+	}	
 }
